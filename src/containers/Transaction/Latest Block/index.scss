@@ -1,0 +1,41 @@
+@import "../../../assets/scss/style.scss";
+
+.block_latestblock_wrapper {
+  .table_title {
+   padding-top: 0px;
+   color: black;
+  }
+  .block_data_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 10px;
+    .row {
+      width: 100%;
+      margin: auto;
+      border-radius: $base-border-radius;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      box-shadow: $soft-box-shadow;
+      .col {
+        background: transparent;
+        backdrop-filter: blur(10px);
+        box-shadow: $soft-box-shadow;
+        padding: 13px;
+
+        .block_data_key {
+          font-size: 1rem;
+          font-weight: 600;
+          color: white;
+        }
+        .block_data_value {
+          font-weight: 600;
+          font-size: 1rem;
+          //   color: rgb(32, 229, 32);
+          color: white;
+        }
+      }
+    }
+  }
+}

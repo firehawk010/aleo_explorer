@@ -1,0 +1,13 @@
+@import "../../../assets/scss/style.scss";
+
+.block_blockData_wrapper {
+  .hash_container {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: center;
+  }
+  .button_container{
+    padding: 10px 20px ;
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../assets/scss/custom.scss";
+
+.dashboard_cards_main_container {
+  .dashboard_cards_container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 15px;
+    .darhboard_cards {
+      height: 16.5rem;
+      backdrop-filter: blur(10px);
+      box-shadow: $soft-box-shadow;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .latest_blocks {
+      grid-column: 1 / span 3;
+    }
+    .latest_transactions {
+      grid-column: 4 / span 3;
+    }
+    .transaction_history {
+      grid-column: 1 / span 3;
+    }
+    .leaderboard {
+      grid-column: 4 / span 3;
+    }
+  }
+}

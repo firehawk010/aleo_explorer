@@ -1,0 +1,47 @@
+@import "../../../assets/scss/style.scss";
+
+.block_latestransaction_wrapper {
+  .table_title {
+    padding-top: 0px;
+    color: black;
+  }
+  .transaction_data_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 10px;
+    .row {
+      width: 100%;
+      margin: auto;
+      border-radius: $base-border-radius;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      box-shadow: $soft-box-shadow;
+      .col {
+        background: transparent;
+        backdrop-filter: blur(10px);
+        box-shadow: $soft-box-shadow;
+        padding: 13px;
+
+        .transaction_data_key {
+          font-size: 1rem;
+          font-weight: 600;
+          color: white;
+        }
+        .transaction_data_value {
+          font-weight: 600;
+          font-size: 1rem;
+          //   color: rgb(32, 229, 32);
+          color: white;
+          display: flex;
+          align-items: center;
+          column-gap: 10px;
+          .icon {
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+}

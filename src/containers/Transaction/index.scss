@@ -1,0 +1,30 @@
+@import "../../assets/scss/style.scss";
+
+.block_main_bg {
+  .block_main_container {
+    .block_container_layout {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 15px;
+      .box_container {
+        height: 16.5rem;
+        overflow: scroll;
+      }
+      .latest_block_container {
+        grid-column: 1 / span 3;
+
+      }
+      .latest_transaction_container {
+        grid-column: 1 / span 3;
+        grid-row-start: 2;
+
+      }
+      .blocks_container {
+        height: auto;
+        grid-column: 4 / span 6;
+        grid-row: 1 / span 2;
+      }
+    }
+  }
+}

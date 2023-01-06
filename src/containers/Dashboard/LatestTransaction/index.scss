@@ -1,0 +1,9 @@
+@import "../../../assets/scss/style.scss";
+.dashboard_latest_transaction_wrapper {
+  .hash_container {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: center;
+  }
+}
