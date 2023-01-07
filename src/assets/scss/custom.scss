@@ -11,9 +11,23 @@ body {
   font-variant: normal !important;
   font-weight: 300;
   height: auto !important;
-  background: url("../images/dashboard.png");
+  // background: url("../images/dashboard.png");
+  background: url("../images/download.png");
+  // background-color: #001628;
+  // background-color: #002140;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top;
+  position: relative;
+  // &::before {
+  //   content: "";
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(0, 33, 64, 0.3);
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  // }
 }
 
 .icon {
@@ -74,6 +88,8 @@ body {
               color: $dark-color;
               text-align: center;
               //   background-color: rgba($secondary-color, 0.3);
+              padding: 10px 0;
+              word-break: break-all;
             }
             th:nth-child(1) {
               text-align: left !important;
@@ -154,7 +170,7 @@ body {
 
             &:nth-child(odd) {
               //   background: $background-light;
-              box-shadow: $box-shadow-inner-light;
+              // box-shadow: $box-shadow-inner-light;
 
               &:hover {
                 // box-shadow: $box-shadow-inner-light;
@@ -183,6 +199,7 @@ body {
 .box_container {
   padding: 10px;
   background: transparent;
+  background: rgba(0, 33, 64, 0.81);
   backdrop-filter: blur(10px);
   box-shadow: $soft-box-shadow;
   border-radius: $base-border-radius;

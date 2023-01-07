@@ -1,0 +1,106 @@
+@import "../../../assets/scss/style.scss";
+
+.transactiondetail_bg_container {
+  .transactiondetail_main_container {
+    .transactionDetail_up_container {
+      .box_container {
+        .title {
+          font-size: 1.2rem;
+          color: white;
+          font-weight: 700;
+          margin-bottom: 1.1rem;
+          padding-left: 19px;
+        }
+
+        .data_container_main_box {
+          display: flex;
+          margin-bottom: 0.8rem;
+          background: transparent;
+          backdrop-filter: blur(10px);
+          box-shadow: $soft-box-shadow;
+          border-radius: $base-border-radius;
+          .data_box_container_box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+          }
+          .data_box {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            .key {
+              color: white;
+              font-size: 1rem;
+              font-weight: 500;
+            }
+            .value {
+              color: white;
+              font-size: 1rem;
+              font-weight: 300;
+              display: flex;
+              align-items: center;
+              column-gap: 10px;
+              span {
+                .copy-section {
+                  .icon {
+                    height: 22px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .transactionDetail_bottom_container {
+      margin-top: 20px;
+      .transactionDetail_bottom_main {
+        .transactionDetail_bottom_wrapper {
+          display: flex;
+          justify-content: space-between;
+          column-gap: 10px;
+          .transactionDetail_bottom_single_container {
+            // padding: 10px 0px 10px 15px;
+            flex-basis: 30%;
+            .title {
+              font-size: 1.2rem;
+              color: white;
+              font-weight: 700;
+              margin-bottom: 1.1rem;
+              padding: 0 10px;
+            }
+            .data_box {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 10px;
+              .key {
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+                padding: 0 10px;
+              }
+              .value {
+                padding: 0 10px;
+                color: rgb(201, 198, 198);
+                font-size: 1rem;
+                font-weight: 300;
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                span {
+                  .copy-section {
+                    .icon {
+                      height: 22px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

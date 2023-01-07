@@ -46,7 +46,7 @@ const Leaderboard = () => {
       key: 'coinbase',
       width: 300,
       render: (data) =>
-      <div>{data} credits</div>
+        <div>{data} credits</div>
     },
   ];
 
@@ -100,12 +100,12 @@ const Leaderboard = () => {
     <>
       <div className="leaderboard_bg_container">
         <div className="leaderboard_main_container">
-          <div className="leaderboard_top_container">
+          <div className="leaderboard_top_container" data-aos="zoom-in" data-aos-delay={200}>
             <div className="box_container">
               <div className="table_title">
                 Leaderboard Stats
               </div>
-              <div className="stats_container">
+              <div className="stats_container" >
                 <div className="stats">
                   <div className="key">Total Coinbase :</div>
                   <div className="value">12,34,56</div>
@@ -121,7 +121,7 @@ const Leaderboard = () => {
               </div>
             </div>
           </div>
-          <div className="leaderboard_bottom_container">
+          <div className="leaderboard_bottom_container" data-aos="zoom-in" data-aos-delay={200}>
             <div className="box_container">
               <div className="table_title">
                 Leaderboard Ranking

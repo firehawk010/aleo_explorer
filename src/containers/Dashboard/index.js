@@ -13,16 +13,16 @@ const Dashboard = () => {
         <>
             <div className="dashboard_cards_main_container">
                 <div className="dashboard_cards_container">
-                    <div className="darhboard_cards latest_blocks">
+                    <div className="darhboard_cards latest_blocks box_container" data-aos="fade-right">
                         <LatestBlock />
                     </div>
-                    <div className="darhboard_cards latest_transactions">
+                    <div className="darhboard_cards latest_transactions box_container" data-aos="fade-left" data-aos-delay={100}>
                         <LatestTransaction />
                     </div>
-                    <div className="darhboard_cards transaction_history">
+                    <div className="darhboard_cards transaction_history box_container" data-aos="fade-up" data-aos-delay={200}>
                         <TransactionHistoryGraph />
                     </div>
-                    <div className="darhboard_cards leaderboard">
+                    <div className="darhboard_cards leaderboard box_container" data-aos="fade-left" data-aos-delay={300}>
                         <LeaderBoard />
                     </div>
                 </div>

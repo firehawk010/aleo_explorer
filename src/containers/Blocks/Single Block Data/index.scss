@@ -1,0 +1,104 @@
+@import "../../../assets/scss/style.scss";
+
+.singleblock_main_bg {
+  .singleblock_main_container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+
+    .block_container {
+      grid-column: 1 / span 8;
+      .box_container {
+        // padding: 20px 15px;
+        .block_title {
+          font-size: 1.2rem;
+          color: white;
+          font-weight: 700;
+          margin-bottom: 1.1rem;
+          padding-left: 19px;
+        }
+        .data_container {
+          .data_container_main_box {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            margin-bottom: 0.8rem;
+            .data_box {
+              display: flex;
+              column-gap: 10px;
+              background: transparent;
+              backdrop-filter: blur(10px);
+              box-shadow: $soft-box-shadow;
+              border-radius: $base-border-radius;
+              padding: 13px 20px;
+
+              .key {
+                width: 20%;
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+              }
+              .value {
+                width: 80%;
+                color: white;
+                font-size: 1rem;
+                font-weight: 300;
+              }
+            }
+          }
+        }
+      }
+    }
+    .transaction_container {
+      grid-column: 9 / span 4;
+      .box_container {
+        .transaction_title {
+          font-size: 1.2rem;
+          color: white;
+          font-weight: 700;
+          margin-bottom: 1.1rem;
+          padding-left: 19px;
+        }
+        .data_container {
+          .data_container_main_box {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            margin-bottom: 0.8rem;
+            .single_box_container {
+              background: transparent;
+              backdrop-filter: blur(10px);
+              box-shadow: $soft-box-shadow;
+              border-radius: $base-border-radius;
+              display: flex;
+              flex-direction: column;
+              row-gap: 10px;
+              .data_box {
+                display: flex;
+                column-gap: 10px;
+                background: transparent;
+                backdrop-filter: blur(10px);
+                box-shadow: $soft-box-shadow;
+                border-radius: $base-border-radius;
+                padding: 13px 20px;
+
+                .key {
+                  width: 35%;
+                  color: white;
+                  font-size: 1rem;
+                  font-weight: 500;
+                }
+                .value {
+                  width: 65%;
+                  color: white;
+                  font-size: 1rem;
+                  font-weight: 300;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
