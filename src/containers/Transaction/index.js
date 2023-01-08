@@ -15,7 +15,7 @@ const Transaction = () => {
                             <LatestBlock />
                         </div>
 
-                        <div className="box_container latest_transaction_container" data-aos="fade-up" data-aos-delay={100}>
+                        <div className="box_container latest_transaction_container">
                             <LatestTransaction />
                         </div>
                         <div className="box_container blocks_container" data-aos="fade-left" data-aos-delay={200}>
