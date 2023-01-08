@@ -203,4 +203,5 @@ body {
   backdrop-filter: blur(10px);
   box-shadow: $soft-box-shadow;
   border-radius: $base-border-radius;
+  // clip-path: polygon(35% 0, 41% 13%, 100% 13%, 100% 100%, 0 99%, 0 60%, 0 0);
 }
