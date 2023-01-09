@@ -62,8 +62,8 @@ function App() {
           </Content>
 
           {/* Footer  */}
-          <Footer style={{ textAlign: 'center', padding: "16px 0" }}>
-            ALEO ©2023 Created by  EUTROPIADEVS
+          <Footer style={{ textAlign: 'center', padding: "16px 0", color: "#02c9f7" }}>
+            ALEO ©2023
           </Footer>
         </Layout>
 
