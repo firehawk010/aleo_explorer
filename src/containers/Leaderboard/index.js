@@ -3,6 +3,7 @@ import React from 'react'
 import { Row } from '../../components/Common';
 import Copy from '../../components/Copy';
 import './index.scss';
+import dollorIcon from '../../assets/images/icons8-us-dollar-circled-80.png';
 
 const Leaderboard = () => {
 
@@ -103,19 +104,19 @@ const Leaderboard = () => {
           <div className="leaderboard_top_container" data-aos="zoom-in" data-aos-delay={200}>
             <div className="box_container">
               <div className="table_title">
-                Leaderboard Stats
+                Leaderboard <span>Stats</span>
               </div>
               <div className="stats_container" >
                 <div className="stats">
-                  <div className="key">Total Coinbase :</div>
+                  <div className="key"> <span> <img src={dollorIcon} alt="@dollor" style={{ width: "11%" }} /></span> Total <span> Coinbase :</span></div>
                   <div className="value">12,34,56</div>
                 </div>
                 <div className="stats border_stats">
-                  <div className="key">Total Incentives :</div>
+                  <div className="key"><span> <img src={dollorIcon} alt="@dollor" style={{ width: "11%" }} /></span> Total <span>Incentives :</span> </div>
                   <div className="value">12,34,56</div>
                 </div>
                 <div className="stats">
-                  <div className="key">Number of Provers:</div>
+                  <div className="key"><span> <img src={dollorIcon} alt="@dollor" style={{ width: "11%" }} /></span> Number of <span>Provers:</span> </div>
                   <div className="value">12,349</div>
                 </div>
               </div>
@@ -124,7 +125,7 @@ const Leaderboard = () => {
           <div className="leaderboard_bottom_container" data-aos="zoom-in" data-aos-delay={200}>
             <div className="box_container">
               <div className="table_title">
-                Leaderboard Ranking
+                Leaderboard <span>Ranking</span>
               </div>
               <div className="leaderboard_ranking_table">
                 <Table className='eutropia_table' columns={columns} dataSource={data} scroll={{ x: 950, y: 200 }} pagination={false} />
@@ -132,7 +133,7 @@ const Leaderboard = () => {
               <div className="button_container">
                 <Row>
                   <div className="button_container">
-                    <Button type='primary'>Back</Button>
+                    <Button type='primary' className='ant-btn-primary-secondary'>Back</Button>
                     <Button type='primary' className='ml-2'>Next</Button>
                   </div>
                 </Row>

@@ -91,7 +91,7 @@ const TransactionData = () => {
                 <Table className='eutropia_table' columns={columns} dataSource={data} scroll={{ x: 820, y: 393 }} pagination={false} />
                 <Row>
                     <div className="button_container">
-                        <Button type='primary'>Back</Button>
+                        <Button type='primary' className='ant-btn-primary-secondary'>Back</Button>
                         <Button type='primary' className='ml-2'>Next</Button>
                     </div>
                 </Row>

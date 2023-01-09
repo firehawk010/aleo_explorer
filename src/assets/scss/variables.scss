@@ -8,13 +8,18 @@ Eutropia Devs
 
 // *Colors
 $primary-color: #0e7ac9; // primary color for all components
-$secondary-color: #665aa6;
+// $secondary-color: #665aa6;
+$secondary-color: #02c9f7;
 $dark-color: #040517;
 
-// Text Colors
+// *Text Colors
 $white: #fff;
 $black: #000;
 $text-color-dark: #b2b6c6;
+$success-color: #00ce8e; // success state color
+$warning-color: #fdc011; // warning state color
+$error-color: #f5222d; // error state color
+$btn-bg-dark: #211d34;
 
 $text-color-white: #fff;
 $text-color-light: #73aed2;
@@ -25,6 +30,7 @@ $text-color-secondary-dark: #333;
 $text-color-dark2: #03253e;
 $text-color-light2: #747f86;
 $text-color-label-dark2: #2d3748;
+$highlight-color: #02c9f7;
 
 // *Background Colors
 
@@ -33,8 +39,10 @@ $navbar-color: rgba(#001628, 0.2);
 $background-dark1: #211d34;
 $background-dark2: #3c324c;
 $background-light: #ffffff;
+// $button-secondary-bg: #002140;
+$button-secondary-bg: #02c9f7;
 
-// Box Shadow
+// *Box Shadow
 $soft-box-shadow: 0 0 10px rgba($black, 0.2);
 
 $box-shadow-inner-light: 3px 3px 10px rgba(174, 174, 192, 0.4),
@@ -42,10 +50,10 @@ $box-shadow-inner-light: 3px 3px 10px rgba(174, 174, 192, 0.4),
 $box-shadow-inner-light-hover: 3px 3px 10px rgba(174, 174, 192, 0.4),
   inset -8px -8px 12px rgba(174, 174, 192, 0.25);
 
-// Font Family
+// *Font Family
 $font-family: "Poppins", sans-serif !important;
 
-// Font Size
+// *Font Size
 $font-size-base: 14px;
 $font-size-xlg: $font-size-base + 4px; //18px
 $font-size-lg: $font-size-base + 2px; //16px
@@ -57,7 +65,6 @@ $border-color-base: rgba(255, 255, 255, 0.7); // major border color
 $border-dark: #303950;
 $border-light: #697589;
 
+// *Border radius
 
-// *Border radius 
-
-$base-border-radius:10px;
+$base-border-radius: 10px;

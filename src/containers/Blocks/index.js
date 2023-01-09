@@ -11,14 +11,14 @@ const Blocks = () => {
                 <div className="block_main_container">
                     <div className="block_container_layout">
 
-                        <div className="box_container latest_block_container" data-aos="fade-down" data-aos-delay={50}>
+                        <div className="box_container latest_block_container" >
                             <LatestBlock />
                         </div>
 
-                        <div className="box_container latest_transaction_container">
+                        <div className="box_container latest_transaction_container" >
                             <LatestTransaction />
                         </div>
-                        <div className="box_container blocks_container" data-aos="fade-left" data-aos-delay={200}>
+                        <div className="box_container blocks_container" >
                             <BlockData />
                         </div>
 

@@ -19,12 +19,12 @@ const LeaderBoard = () => {
                         <div className="asset_icon">
                             <SvgIcon name="block-icon" />
                         </div>
-                        <div className="name"> 2345676</div>
+                        <div className="name"> {text}</div>
                     </div>
                 </>,
         },
         {
-            title: 'Hash',
+            title: 'Prover address',
             dataIndex: 'block_hash',
             key: 'block_hash',
             align: "center",
@@ -39,7 +39,7 @@ const LeaderBoard = () => {
 
         },
         {
-            title: 'Timestamp',
+            title: 'Incentives',
             dataIndex: 'timeStamp',
             key: 'timeStamp',
             width: 150,
@@ -49,40 +49,40 @@ const LeaderBoard = () => {
     const data = [
         {
             key: '1',
-            block_height: 'John Brown',
-            block_hash: "xjhbiuedbhjbueibdejkdbeiudbjedmbeiubdkjemdewbdiubdkjbd",
-            timeStamp: "6 sec ago",
+            block_height: '368427',
+            block_hash: "aleo1548889twyay7cl50cnk6x6hjlsv6hzs603ylcqhswf5kt5pvzvxqk8xexu",
+            timeStamp: "94,114 credits",
         },
         {
             key: '2',
-            block_height: 'Jim Green',
-            block_hash: "xjhbiuedbhjbueibdejkdbeiudbjedmbeiubdkjemdewbdiubdkjbd",
-            timeStamp: "6 sec ago",
+            block_height: '368426',
+            block_hash: "aleo1qeyuw2vq3lmukd3z6ryevq75lvkfutxj3743693m5dadghczqsqsrshe0r",
+            timeStamp: "96,011 credits",
         },
         {
             key: '3',
-            block_height: 'Joe Black',
-            block_hash: "xjhbiuedbhjbueibdejkdbeiudbjedmbeiubdkjemdewbdiubdkjbd",
-            timeStamp: "6 sec ago",
+            block_height: '368425',
+            block_hash: "aleo1666y6x0qcxa7syyahys6tzalp3aqppqwj7tdf6purwtlyjkpwsxs3wtxlp",
+            timeStamp: "34,992 credits",
         },
         {
             key: '4',
-            block_height: 'Joe Black',
-            block_hash: "xjhbiuedbhjbueibdejkdbeiudbjedmbeiubdkjemdewbdiubdkjbd",
-            timeStamp: "6 sec ago",
+            block_height: '368424',
+            block_hash: "aleo1222yvwq896crn68n9csu7mc0endday26wey5ff8kxzzeddqztq8sxvchcj",
+            timeStamp: "12,517 credits",
         },
         {
             key: '4',
-            block_height: 'Joe Black',
-            block_hash: "xjhbiuedbhjbueibdejkdbeiudbjedmbeiubdkjemdewbdiubdkjbd",
-            timeStamp: "6 sec ago",
+            block_height: '368423',
+            block_hash: "aleo1t0team9fw85wn992jz5c9u0j9lfgksmd7luayxrqa6h4xmewqgysvlv329",
+            timeStamp: "33,912 credits",
         },
     ];
 
     return (
         <>
             <div className="dashboard_leaderboard_wrapper">
-                <h3 className='table_title'>Leaderboard</h3>
+                <h3 className='table_title'>Latest <span>Leaderboard</span> </h3>
                 <Table className='eutropia_table' columns={columns} dataSource={data} scroll={{ x: 380, y: 210 }} pagination={false} />
             </div>
         </>

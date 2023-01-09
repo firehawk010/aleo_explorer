@@ -2,43 +2,52 @@ import React, { useEffect, useState } from 'react';
 import { Space, Table, Tag } from 'antd';
 import { Col, Row, SvgIcon } from '../../../components/Common';
 import Copy from '../../../components/Copy'
-import { truncateString } from '../../../utils/string';
+import { truncateString, unixToGMTTime, unixToGMTTimeWithTime } from '../../../utils/string';
 import './index.scss'
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const LatestTransaction = () => {
     const [blockTx, setBlockTx] = useState()
     const [blockNewTx, setNewBlockTx] = useState()
+
     async function getTx() {
         try {
-          const response = await axios.get('https://vm.aleo.org/api/testnet3/latest/height');
-          setBlockTx(response?.data)
+            const response = await axios.get('https://vm.aleo.org/api/testnet3/latest/height');
+            setBlockTx(response?.data)
         } catch (error) {
-          console.error(error);
+            console.error(error);
         }
-      }
+    }
 
-      async function getNewTx() {
+    async function getNewTx() {
         try {
-          const newResponse = await axios.get(`https://vm.aleo.org/api/testnet3/block/${blockTx}`);
-          setNewBlockTx(newResponse?.data)
+            const newResponse = await axios.get(`https://vm.aleo.org/api/testnet3/block/${blockTx}`);
+            setNewBlockTx(newResponse?.data)
         } catch (error) {
-          console.error(error);
+            console.error(error);
         }
-      }
-      useEffect(() => {
+    }
+
+    useEffect(() => {
         getTx();
-      }, [])
-      useEffect(() => {
-        if (blockTx){
+    }, [])
+
+    setInterval(() => {
+        // getTx();
+        // getNewTx();
+    }, 6000);
+
+    useEffect(() => {
+        if (blockTx) {
             getNewTx();
         }
-      }, [blockTx])
+    }, [blockTx])
 
     return (
         <>
             <div className="block_latestransaction_wrapper">
-                <h3 className='table_title'>Latest Transaction</h3>
+                <h3 className='table_title'>Latest <span>Transaction</span> </h3>
                 <div className="transaction_data_container">
                     {/*  Transaction Id   */}
                     <Row>
@@ -49,8 +58,7 @@ const LatestTransaction = () => {
                         </Col>
                         <Col>
                             <div className="transaction_data_value">
-                                {/* {truncateString(blockNewTx?.transactions[0]?.id, 6, 6)} <span><Copy text={blockNewTx?.transactions[0]?.id} /></span> */}
-                                {blockNewTx?.transactions[0]?.id}
+                                {blockNewTx?.transactions[0]?.id && truncateString(blockNewTx?.transactions[0]?.id, 6, 6)} <span>{blockNewTx?.transactions[0]?.id && <Copy text={blockNewTx?.transactions[0]?.id} />}</span>
                             </div>
                         </Col>
                     </Row>
@@ -76,7 +84,8 @@ const LatestTransaction = () => {
                         </Col>
                         <Col>
                             <div className="transaction_data_value">
-                            {blockNewTx?.header?.metadata?.height}
+                                {blockNewTx?.header?.metadata?.height}
+                                {/* {blockNewTx?.header?.metadata?.height && unixToGMTTimeWithTime(blockNewTx?.header?.metadata?.height)} */}
                             </div>
                         </Col>
                     </Row>
@@ -89,7 +98,7 @@ const LatestTransaction = () => {
                         </Col>
                         <Col>
                             <div className="transaction_data_value">
-                                &rarr;
+                                <Link to="/transactions/transactionDetail">&rarr;</Link>
                             </div>
                         </Col>
                     </Row>

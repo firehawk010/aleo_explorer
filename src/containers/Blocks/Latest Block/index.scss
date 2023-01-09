@@ -2,8 +2,12 @@
 
 .block_latestblock_wrapper {
   .table_title {
-   padding-top: 0px;
-   color: black;
+    font-size: 20px;
+    padding-top: 0px;
+    color: white !important;
+    span {
+      color: $highlight-color;
+    }
   }
   .block_data_container {
     width: 100%;

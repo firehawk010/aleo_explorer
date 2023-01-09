@@ -8,8 +8,11 @@
     .leaderboard_top_container {
       .box_container {
         .table_title {
+          font-size: 20px;
           font-weight: 700;
-          font-size: 1.2rem;
+          span {
+            color: $highlight-color;
+          }
         }
         .stats_container {
           display: flex;
@@ -23,6 +26,9 @@
               font-size: 1.1rem;
               color: white;
               font-weight: 500;
+              span {
+                color: $highlight-color;
+              }
             }
             .value {
               font-size: 0.9rem;
@@ -52,7 +58,10 @@
         height: 23.5rem;
         .table_title {
           font-weight: 700;
-          font-size: 1.2rem;
+          font-size: 20px;
+          span {
+            color: $highlight-color;
+          }
         }
         .leaderboard_ranking_table {
           .hash_container {

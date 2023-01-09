@@ -15,7 +15,7 @@
       font-size: 1.5rem;
       color: $white;
       span {
-        color: $text-color-dark;
+        color: #02c9f7;
         font-weight: 400;
       }
     }
@@ -23,6 +23,42 @@
       display: flex;
       justify-content: flex-end;
       column-gap: 10px;
+      .search_container {
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .input_feild {
+            // height: 30px;
+            input {
+              height: 100%;
+              padding: 11px;
+              outline: none;
+              border: none;
+              border-top-left-radius: 5px;
+              border-bottom-left-radius: 5px;
+              border-bottom: 0.01px solid white;
+            }
+          }
+          .button_container {
+            // height: 30.6px;
+            height: 39.6px;
+            line-height: 0;
+
+            button {
+              height: 100%;
+              outline: none;
+              border: none;
+              border-top-right-radius: 5px;
+              border-bottom-right-radius: 5px;
+              color: $text-color-dark2;
+              background-color: $button-secondary-bg;
+              font-weight: 500;
+              padding: 0 20px;
+            }
+          }
+        }
+      }
       .select_chain {
       }
       .connect_wallet_button {

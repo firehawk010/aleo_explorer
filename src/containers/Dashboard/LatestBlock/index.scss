@@ -1,6 +1,12 @@
 @import "../../../assets/scss/style.scss";
 
 .dashboard_latestblock_wrapper {
+  .table_title {
+    font-size: 20px;
+    span {
+      color: $highlight-color;
+    }
+  }
   .hash_container {
     display: flex;
     align-items: center;
