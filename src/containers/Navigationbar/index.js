@@ -34,7 +34,7 @@ const Navigationbar = () => {
                             />
                         </div>
                         <div className="connect_wallet_button">
-                            <Button type="primary">Connect Wallet</Button>
+                            <Button type="primary" className='ant-btn-primary-secondary'>Connect Wallet</Button>
                         </div>
                     </div>
                 </div>

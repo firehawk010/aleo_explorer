@@ -1,11 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Space, Table, Tag } from 'antd';
 import { Col, Row, SvgIcon } from '../../../components/Common';
 import Copy from '../../../components/Copy'
 import { truncateString } from '../../../utils/string';
 import './index.scss'
+import axios from "axios";
 
 const LatestTransaction = () => {
+    const [blockTx, setBlockTx] = useState()
+    const [blockNewTx, setNewBlockTx] = useState()
+    async function getTx() {
+        try {
+            const response = await axios.get('https://vm.aleo.org/api/testnet3/latest/height');
+            setBlockTx(response?.data)
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    async function getNewTx() {
+        try {
+            const newResponse = await axios.get(`https://vm.aleo.org/api/testnet3/block/${blockTx}`);
+            setNewBlockTx(newResponse?.data)
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    useEffect(() => {
+        getTx();
+    }, [])
+    useEffect(() => {
+        if (blockTx) {
+            getNewTx();
+        }
+    }, [blockTx])
 
 
     return (
@@ -22,7 +50,8 @@ const LatestTransaction = () => {
                         </Col>
                         <Col>
                             <div className="transaction_data_value">
-                                {truncateString("gfduydsbvdcjhbdcuywegbcjewhgebc", 6, 6)} <span><Copy text="gfduydsbvdcjhbdcuywegbcjewhgebc" /></span>
+                                {blockNewTx?.transactions[0]?.id && truncateString(blockNewTx?.transactions[0]?.id, 6, 6)} <span>{blockNewTx?.transactions[0]?.id && <Copy text={blockNewTx?.transactions[0]?.id} />}</span>
+                                {/* {blockNewTx?.transactions[0]?.id} */}
                             </div>
                         </Col>
                     </Row>
@@ -48,7 +77,7 @@ const LatestTransaction = () => {
                         </Col>
                         <Col>
                             <div className="transaction_data_value">
-                                2019/07/14 15:45:15
+                                {blockNewTx?.header?.metadata?.height}
                             </div>
                         </Col>
                     </Row>

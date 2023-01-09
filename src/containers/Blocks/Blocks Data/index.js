@@ -117,7 +117,7 @@ const BlockData = () => {
             timestamp: "2023/07/12 12:00:03",
         },
         {
-            key: '4',
+            key: '5',
             block_height: 'Joe Black',
             block_hash: "xjhbiuedbhjbueibdejkdbeiudbjedmbeiubdkjemdewbdiubdkjbd",
             solutions: "334",
@@ -127,7 +127,7 @@ const BlockData = () => {
             timestamp: "2023/07/12 12:00:03",
         },
         {
-            key: '4',
+            key: '6',
             block_height: 'Joe Black',
             block_hash: "xjhbiuedbhjbueibdejkdbeiudbjedmbeiubdkjemdewbdiubdkjbd",
             solutions: "334",
@@ -137,7 +137,7 @@ const BlockData = () => {
             timestamp: "2023/07/12 12:00:03",
         },
         {
-            key: '4',
+            key: '7',
             block_height: 'Joe Black',
             block_hash: "xjhbiuedbhjbueibdejkdbeiudbjedmbeiubdkjemdewbdiubdkjbd",
             solutions: "334",
@@ -155,7 +155,7 @@ const BlockData = () => {
                 <Table className='eutropia_table' columns={columns} dataSource={data} scroll={{ x: 780, y: 393 }} pagination={false} />
                 <Row>
                     <div className="button_container">
-                        <Button type='primary'>Back</Button>
+                        <Button type='primary' className='ant-btn-primary-secondary'>Back</Button>
                         <Button type='primary' className='ml-2'>Next</Button>
                     </div>
                 </Row>

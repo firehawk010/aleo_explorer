@@ -3,6 +3,7 @@ import React from 'react'
 import { Row } from '../../components/Common';
 import Copy from '../../components/Copy';
 import './index.scss';
+import dollorIcon from '../../assets/images/icons8-us-dollar-circled.gif';
 
 const Leaderboard = () => {
 
@@ -107,7 +108,7 @@ const Leaderboard = () => {
               </div>
               <div className="stats_container" >
                 <div className="stats">
-                  <div className="key">Total Coinbase :</div>
+                  <div className="key"> <span></span> Total Coinbase :</div>
                   <div className="value">12,34,56</div>
                 </div>
                 <div className="stats border_stats">
@@ -132,7 +133,7 @@ const Leaderboard = () => {
               <div className="button_container">
                 <Row>
                   <div className="button_container">
-                    <Button type='primary'>Back</Button>
+                    <Button type='primary' className='ant-btn-primary-secondary'>Back</Button>
                     <Button type='primary' className='ml-2'>Next</Button>
                   </div>
                 </Row>

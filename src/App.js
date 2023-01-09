@@ -57,7 +57,7 @@ function App() {
           </Header>
 
           {/* Content */}
-          <Content style={{ padding: '24px 16px', height: "83vh", minHeight: "83vh", maxHeight: "83vh", background: "transparent", overflow: "scroll", }} >
+          <Content style={{ padding: '26px 16px', height: "83vh", minHeight: "83vh", maxHeight: "83vh", background: "transparent", overflow: "scroll", }} >
             <Router />
           </Content>
 
