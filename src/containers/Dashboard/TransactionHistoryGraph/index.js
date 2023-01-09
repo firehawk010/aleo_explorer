@@ -5,85 +5,70 @@ import './index.scss';
 
 const TransactionHistoryGraph = () => {
 
-  const lineChart1 = {
+  const PriceChart = {
     chart: {
-      type: "line",
+      type: "spline",
       backgroundColor: null,
-      height: "180",
-      margin: 0,
-      padding: 0,
-      spacing: 0,
-      style: {
-        fontFamily: 'Montserrat'
-      },
-      // events: {
-      //   load() {
-      //     this.showLoading();
-      //     setTimeout(this.hideLoading.bind(this), 2000);
-      //   }
-      // }
+      height: 220,
+      marginBottom: 30,
     },
     credits: {
       enabled: false,
     },
     title: {
-      text: null,
-    },
-    tooltip: {
-      enabled: true,
-    },
-    plotOptions: {
-      line: {
-        spacing: 0,
-        size: "95%",
-        showInLegend: false,
-        lineWidth: 3,
-        lineColor: "#516FB6",
-        fillColor: false,
-        marker: {
-          enabled: false,
-          symbol: 'circle',
-          radius: 8,
-          states: {
-            hover: {
-              enabled: false
-            }
-          }
-        }
-      },
+      text: "",
     },
     yAxis: {
-      gridLineColor: "transparent",
-      labels: {
-        series: [
-          {
-            data: [0, 1, 3, 2, 4, 5, 4.5, 4, 6, 8],
-          },
-        ],
-      },
+      gridLineWidth: 0,
       title: {
         enabled: false,
       },
-    },
-    tooltip: {
-      headerFormat: '<b>{series.name}</b><br/>',
-      pointFormat: '{point.y}'
+      labels: {
+        enabled: true,
+        style: {
+          color: "#fff",
+        },
+      },
     },
     xAxis: {
-      lineColor: "transparent",
+      lineColor: false,
       labels: {
-        enabled: false,
+        style: {
+          fontSize: 10,
+          color: "#fff",
+          fontWeight: 300,
+        },
       },
-
+      gridLineWidth: 1,
+      gridLineColor: "#002140",
+      categories: [
+        // "APR",
+        // "MAY",
+        // "JUN",
+        // "JUL",
+        // "AUG",
+        // "SEP",
+        // "OCT",
+        // "NOV",
+        // "DEC",
+        // "JAN",
+        // "FEB",
+        // "MAR",
+        // "APR",
+        // "MAY",
+        // "JUN",
+      ],
     },
     series: [
       {
-        data: [0, 1, 3, 2, 4, 5, 4.5, 4, 6, 8],
+        showInLegend: false,
+        lineWidth: 2,
+        lineColor: "#02c9f7",
+        marker: false,
+        data: [4, 1, 3, 2, 14, 5, 4.5, 4, 6, 2, 9, 7, 11, 8],
       },
     ],
   };
-
-
 
   return (
     <>
@@ -91,9 +76,9 @@ const TransactionHistoryGraph = () => {
         <div className="transaction_graph_main_container">
           <div className="transaction_container">
             <div className="title">
-              Transaction Traffic
+              Transaction <span>Traffic</span>
             </div>
-            <HighchartsReact highcharts={Highcharts} options={lineChart1} />
+            <HighchartsReact highcharts={Highcharts} options={PriceChart} />
           </div>
         </div>
       </div>

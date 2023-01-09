@@ -115,7 +115,7 @@ const Poverdetail = () => {
                     <div className="block_container">
                         <div className="box_container">
                             <div className="block_title">
-                                Prover Detail
+                                Prover <span>Detail</span> 
                             </div>
                             <div className="data_container" >
                                 <div className="data_container_main_box" >

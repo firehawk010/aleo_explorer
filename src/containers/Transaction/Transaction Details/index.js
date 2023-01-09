@@ -10,7 +10,7 @@ const TransactionDetails = () => {
                 <div className="transactiondetail_main_container">
                     <div className="transactionDetail_up_container">
                         <div className="box_container">
-                            <div className="title">Transaction Detail</div>
+                            <div className="title">Transaction <span>Detail</span> </div>
                             <div className="data_container_main_box" >
                                 <div className="data_box_container_box" data-aos="fade-down" data-aos-offset="0">
 

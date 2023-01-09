@@ -5,25 +5,26 @@ import Copy from '../../../components/Copy'
 import { truncateString } from '../../../utils/string';
 import './index.scss'
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const LatestBlock = () => {
     const [blocktxData, setTxBlockData] = useState()
     async function getTxUser() {
         try {
-          const response = await axios.get('https://vm.aleo.org/api/testnet3/latest/block');
-          setTxBlockData(response?.data)
+            const response = await axios.get('https://vm.aleo.org/api/testnet3/latest/block');
+            setTxBlockData(response?.data)
         } catch (error) {
-          console.error(error);
+            console.error(error);
         }
-      }
-      useEffect(() => {
+    }
+    useEffect(() => {
         getTxUser();
-      }, [])
+    }, [])
 
     return (
         <>
             <div className="block_latestblock_wrapper">
-                <h3 className='table_title'>Latest Block</h3>
+                <h3 className='table_title'>Latest <span>Block</span> </h3>
                 <div className="block_data_container">
                     {/* Block  */}
                     <Row>
@@ -34,7 +35,7 @@ const LatestBlock = () => {
                         </Col>
                         <Col>
                             <div className="block_data_value">
-                            {blocktxData?.header?.metadata?.height}
+                                {blocktxData?.header?.metadata?.height}
                             </div>
                         </Col>
                     </Row>
@@ -60,7 +61,7 @@ const LatestBlock = () => {
                         </Col>
                         <Col>
                             <div className="block_data_value">
-                            {blocktxData?.header?.metadata?.timestamp}
+                                {blocktxData?.header?.metadata?.timestamp}
                             </div>
                         </Col>
                     </Row>
@@ -73,7 +74,7 @@ const LatestBlock = () => {
                         </Col>
                         <Col>
                             <div className="block_data_value">
-                               &rarr;
+                                <Link to="/blocks/blockDetails">&rarr;</Link>
                             </div>
                         </Col>
                     </Row>

@@ -5,6 +5,7 @@ import Copy from '../../../components/Copy'
 import { truncateString, unixToGMTTime, unixToGMTTimeWithTime } from '../../../utils/string';
 import './index.scss'
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const LatestTransaction = () => {
     const [blockTx, setBlockTx] = useState()
@@ -32,6 +33,11 @@ const LatestTransaction = () => {
         getTx();
     }, [])
 
+    setInterval(() => {
+        // getTx();
+        // getNewTx();
+    }, 6000);
+
     useEffect(() => {
         if (blockTx) {
             getNewTx();
@@ -41,7 +47,7 @@ const LatestTransaction = () => {
     return (
         <>
             <div className="block_latestransaction_wrapper">
-                <h3 className='table_title'>Latest Transaction</h3>
+                <h3 className='table_title'>Latest <span>Transaction</span> </h3>
                 <div className="transaction_data_container">
                     {/*  Transaction Id   */}
                     <Row>
@@ -92,7 +98,7 @@ const LatestTransaction = () => {
                         </Col>
                         <Col>
                             <div className="transaction_data_value">
-                                &rarr;
+                                <Link to="/transactions/transactionDetail">&rarr;</Link>
                             </div>
                         </Col>
                     </Row>

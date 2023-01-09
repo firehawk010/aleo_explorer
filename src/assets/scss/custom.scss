@@ -12,12 +12,12 @@ body {
   font-weight: 300;
   height: auto !important;
   // background: url("../images/dashboard.png");
-  background: url("../images/download.png");
-  // background-color: #001628;
+  // background: url("../images/download.png");
+  background-color: #001628;
   // background-color: #002140;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: bottom;
   position: relative;
   // &::before {
   //   content: "";
@@ -50,8 +50,12 @@ body {
           border-radius: 0;
           border-left: 4px solid transparent;
         }
+        span {
+          // color: $highlight-color;
+        }
         .ant-menu-item-selected {
-          border-left: 4px solid $secondary-color;
+          border-left: 4px solid $highlight-color;
+          color: $highlight-color;
           // padding-left: 23px;
         }
       }
@@ -67,13 +71,14 @@ body {
     .ant-layout-content {
     }
     .ant-layout-footer {
-      background: rgba($black, 0.1);
+      background: rgba(#001628, 0.1);
       padding: 15px 50px;
       color: rgba(0, 0, 0, 0.88);
       font-size: 14px;
       position: absolute;
       width: 100%;
       bottom: 0;
+      left: 0;
     }
   }
 }
@@ -279,7 +284,8 @@ body {
   }
   &.ant-btn-primary-secondary {
     background-color: $button-secondary-bg;
-    color: white;
+    color: $text-color-dark2;
+    font-weight: 500;
     height: 42px;
   }
 
@@ -334,6 +340,13 @@ body {
   padding: 3px 11px;
   .ant-select-arrow {
     right: 17%;
+    top: 60%;
+  }
+  .ant-select-selector {
+    height: 40px !important;
+    .ant-select-selection-item {
+      line-height: 37px;
+    }
   }
 }
 
@@ -343,8 +356,8 @@ body {
   padding: 10px;
   background: transparent;
   // background: rgba(0, 33, 64, 0.81);
-  background: rgba(0, 33, 64, 0.6);
-  backdrop-filter: blur(10px);
+  // background: rgba(0, 33, 64, 0.8);
+  backdrop-filter: saturate(1.2) blur(15px);
   box-shadow: $soft-box-shadow;
   border-radius: $base-border-radius;
   // clip-path: polygon(35% 0, 41% 13%, 100% 13%, 100% 100%, 0 99%, 0 60%, 0 0);

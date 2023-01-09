@@ -5,6 +5,7 @@ import Copy from '../../../components/Copy'
 import { truncateString } from '../../../utils/string';
 import './index.scss'
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const LatestBlock = () => {
     const [blockData, setBlockData] = useState()
@@ -20,10 +21,14 @@ const LatestBlock = () => {
         getUser();
     }, [])
 
+    setInterval(() => {
+        getUser();
+    }, 6000);
+
     return (
         <>
             <div className="block_latestblock_wrapper">
-                <h3 className='table_title'>Latest Block</h3>
+                <h3 className='table_title'>Latest <span>Block</span> </h3>
                 <div className="block_data_container">
                     {/* Block  */}
                     <Row>
@@ -73,7 +78,7 @@ const LatestBlock = () => {
                         </Col>
                         <Col>
                             <div className="block_data_value">
-                                &rarr;
+                                <Link to="/blocks/blockDetails">&rarr;</Link>
                             </div>
                         </Col>
                     </Row>
